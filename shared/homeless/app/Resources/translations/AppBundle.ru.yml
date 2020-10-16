@@ -1,5 +1,5 @@
 breadcrumb:
-      link_client_list: Клиенты
+      link_client_list: Посетители
       link_client_create: Создать
       link_client_delete: Удалить
       link_note_list: Примечания
@@ -8,7 +8,7 @@ breadcrumb:
       link_service_list: Услуги
       link_service_create: Создать
       link_service_delete: Удалить
-      link_client_field_list: Доп. поля клиентов
+      link_client_field_list: Доп. поля поситителей
       link_client_field_create: Создать
       link_client_field_delete: Удалить
       link_client_field_option_list: Варианты выбора
@@ -26,10 +26,10 @@ breadcrumb:
       link_document_file_list: Загруженные файлы
       link_document_file_create: Создать
       link_document_file_delete: Удалить
-      link_contract_list: Сервисные планы
+      link_contract_list: Сопровождение
       link_contract_create: Создать
       link_contract_delete: Удалить
-      link_shelter_history_list: Проживание в приюте
+      link_shelter_history_list: Программа помощи
       link_shelter_history_create: Создать
       link_shelter_history_delete: Удалить
       link_resident_questionnaire_list: Анкета проживающего
@@ -38,7 +38,7 @@ breadcrumb:
       link_certificate_list: Выдать справку
       link_certificate_create: Создать
       link_certificate_delete: Удалить
-      link_generated_document_list: Построить документ
+      link_generated_document_list: Составить документ
       link_generated_document_create: Создать
       link_generated_document_delete: Удалить
       link_notice_list: Напоминания
@@ -50,13 +50,13 @@ breadcrumb:
       link_contract_item_type_list: Типы пунктов договоров
       link_contract_item_type_create: Создать
       link_contract_item_type_delete: Удалить
-      link_generated_document_type_list: Типы построенных документов
+      link_generated_document_type_list: Типы составленных документов
       link_generated_document_type_create: Создать
       link_generated_document_type_delete: Удалить
-      link_generated_document_start_text_list: Преамбулы построенных документов
+      link_generated_document_start_text_list: Преамбулы составленных документов
       link_generated_document_start_text_create: Создать
       link_generated_document_start_text_delete: Удалить
-      link_generated_document_end_text_list: Заключения построенных документов
+      link_generated_document_end_text_list: Заключения составленных документов
       link_generated_document_end_text_create: Создать
       link_generated_document_end_text_delete: Удалить
       link_certificate_type_list: Типы справок
