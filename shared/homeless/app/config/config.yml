@@ -179,19 +179,19 @@ sonata_admin:
     dashboard:
          groups:
              app.clients:
-                 label: Клиенты
+                 label: Посетители
                  icon: '<i class="fa fa-users"></i>'
                  items:
                       - route: my_clients
-                        label: 'Мои клиенты'
+                        label: 'Добавленные мною'
                         roles:
                           [ROLE_APP_CLIENT_ADMIN_LIST, ROLE_ADMIN]
                       - route: add_client
-                        label: 'Добавить клиента'
+                        label: 'Добавить посетителя'
                         roles:
                           [ROLE_APP_CLIENT_ADMIN_CREATE, ROLE_ADMIN]
                       - route: my_ex_clients
-                        label: 'Мои бывшие клиенты'
+                        label: 'Мои бывшие поситители'
                         roles:
                           [ROLE_APP_CLIENT_ADMIN_LIST, ROLE_ADMIN]
              app.profile:

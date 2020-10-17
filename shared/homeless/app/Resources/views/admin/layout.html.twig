@@ -72,7 +72,7 @@
     {% else %}
         {% set query = '' %}
     {% endif %}
-     <p style="color: white;margin: 0 10px;">проект "Ночлежки"<span style="float:right">homeless.ru</span></p>
+     <p style="color: white;margin: 0 10px;">Центр социальной поддержки<span style="float:right">santegidiofriends.ru</span></p>
     <form action="{{ path('admin_app_client_list') }}" method="GET" class="sidebar-form" role="search">
         <div class="input-group custom-search-form">
             <input type="text" name="filter[search][value]" value="{{ query }}" class="form-control"
@@ -90,7 +90,7 @@
     {% spaceless %}
         <a class="logo" href="{{ path('my_clients') }}">
             {% image '@logo' %}
-            <img src="{{ asset_url }}" style="max-width: 100%;"/>
+            <img src="https://santegidiofriends.ru/wp-content/uploads/2020/04/Logo-obn.svg" style="max-width: 100%;"/>
             {% endimage %}
         </a>
     {% endspaceless %}
@@ -117,7 +117,7 @@
         <br/><br/><br/>
         <ul class="sidebar-menu">
             <li class="treeview active">
-                <a href="#"><span>История просмотров<br/>анкет клиентов</span><span class="pull-right-container"></span></a>
+                <a href="#"><span>История просмотров<br/>анкет поситителей</span><span class="pull-right-container"></span></a>
                 <ul class="active treeview-menu menu_level_1 menu-open history" style="display: block;">
                     {% for viewedClient in app.user.viewedClients %}
                         <li class="first">

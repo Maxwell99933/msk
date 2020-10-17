@@ -27,7 +27,7 @@ services:
   app.client.admin:
       class: AppBundle\Admin\ClientAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Клиенты' }
+          - { name: sonata.admin, manager_type: orm, label: 'Посетители' }
       arguments: [null, AppBundle\Entity\Client, AppBundle:CRUD, show_in_dashboard: true]
       calls:
           - [addChild, ['@app.note.admin']]
@@ -72,7 +72,7 @@ services:
   app.client_field.admin:
       class: AppBundle\Admin\ClientFieldAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Доп. поля клиентов' }
+          - { name: sonata.admin, manager_type: orm, label: 'Доп. поля посетителей' }
       arguments: [null, AppBundle\Entity\ClientField, SonataAdminBundle:CRUD]
       calls:
           - [addChild, ['@app.client_field_option.admin']]
@@ -122,7 +122,7 @@ services:
   app.contract.admin:
       class: AppBundle\Admin\ContractAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Сервисные планы' }
+          - { name: sonata.admin, manager_type: orm, label: 'Сопровождение' }
       arguments: [null, AppBundle\Entity\Contract, AppBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -138,7 +138,7 @@ services:
   app.contract_item.admin:
       class: AppBundle\Admin\ContractItemAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Пункты сервисного плана' }
+          - { name: sonata.admin, manager_type: orm, label: 'Пункты сопровождения' }
       arguments: [null, AppBundle\Entity\ContractItem, SonataAdminBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -146,7 +146,7 @@ services:
   app.shelter_history.admin:
       class: AppBundle\Admin\ShelterHistoryAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Проживание в приюте' }
+          - { name: sonata.admin, manager_type: orm, label: 'Программа помощи' }
       arguments: [null, AppBundle\Entity\ShelterHistory, SonataAdminBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -162,7 +162,7 @@ services:
   app.generated_document.admin:
       class: AppBundle\Admin\GeneratedDocumentAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Построить документ' }
+          - { name: sonata.admin, manager_type: orm, label: 'Составить документ' }
       arguments: [null, AppBundle\Entity\GeneratedDocument, AppBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -195,7 +195,7 @@ services:
   app.generated_document_type.admin:
       class: AppBundle\Admin\GeneratedDocumentTypeAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Типы постр. док-тов' }
+          - { name: sonata.admin, manager_type: orm, label: 'Типы сост. док-тов' }
       arguments: [null, AppBundle\Entity\GeneratedDocumentType, SonataAdminBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -203,7 +203,7 @@ services:
   app.generated_document_start_text.admin:
       class: AppBundle\Admin\GeneratedDocumentStartTextAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Преамбулы постр. док-тов' }
+          - { name: sonata.admin, manager_type: orm, label: 'Преамбулы сост. док-тов' }
       arguments: [null, AppBundle\Entity\GeneratedDocumentStartText, SonataAdminBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
@@ -211,7 +211,7 @@ services:
   app.generated_document_end_text.admin:
       class: AppBundle\Admin\GeneratedDocumentEndTextAdmin
       tags:
-          - { name: sonata.admin, manager_type: orm, label: 'Заключения постр. док-тов' }
+          - { name: sonata.admin, manager_type: orm, label: 'Заключения сост. док-тов' }
       arguments: [null, AppBundle\Entity\GeneratedDocumentEndText, SonataAdminBundle:CRUD]
       calls:
           - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
