@@ -889,7 +889,7 @@ class ClientAdmin extends BaseAdmin
         if ($securityContext->isGranted('ROLE_SUPER_ADMIN') || $securityContext->isGranted('ROLE_APP_GENERATED_DOCUMENT_ADMIN_LIST') || $securityContext->isGranted('ROLE_APP_GENERATED_DOCUMENT_ADMIN_ALL')) {
             if ($this->isMenuItemEnabled(MenuItem::CODE_GENERATED_DOCUMENT)) {
                 $menu->addChild(
-                    'Построить документ',
+                    'Составить документ',
                     ['uri' => $admin->generateUrl('app.generated_document.admin.list', ['id' => $id])]
                 );
             }
