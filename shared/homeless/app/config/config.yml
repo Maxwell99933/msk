@@ -192,7 +192,7 @@ sonata_admin:
                         roles:
                           [ROLE_APP_CLIENT_ADMIN_CREATE, ROLE_ADMIN]
                       - route: my_ex_clients
-                        label: 'Мои бывшие поситители'
+                        label: 'Сопровождение завершено'
                         roles:
                           [ROLE_APP_CLIENT_ADMIN_LIST, ROLE_ADMIN]
              app.profile:
