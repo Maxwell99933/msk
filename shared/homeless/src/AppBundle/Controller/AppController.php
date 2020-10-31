@@ -155,7 +155,7 @@ class AppController extends Controller
                 && !isset($filter['contractStatus'])
             )
         ) {
-            $filter['search']['value'] = 'Введите запрос...';
+            $filter['search']['value'] = ' ';
         }
 
         return $this->forward('SonataAdminBundle:CRUD:list', [], ['_sonata_admin' => 'app.client.admin', 'filter' => $filter]);
