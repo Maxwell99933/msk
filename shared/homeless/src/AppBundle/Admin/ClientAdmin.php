@@ -1083,6 +1083,13 @@ class ClientAdmin extends BaseAdmin
                 $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
                 break;
                 
+             case 'GoalMIG':
+                $options['map'] = [
+                    $this->getFieldOptionValueId('Другое', $field) => ['additionalFieldGoalMIGOther'],
+                ];
+                $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
+                break;
+                
                 
                 
                 
