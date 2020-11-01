@@ -1023,6 +1023,13 @@ class ClientAdmin extends BaseAdmin
                 ];
                 $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
                 break;
+                
+            case 'docks':
+                $options['map'] = [
+                    $this->getFieldOptionValueId('Да', $field) => ['additionalFielddocksYES'],
+                ];
+                $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
+                break;
 
             case 'pensionReason':
                 $options['map'] = [
