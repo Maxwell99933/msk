@@ -1030,6 +1030,25 @@ class ClientAdmin extends BaseAdmin
                 ];
                 $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
                 break;
+                
+                
+            case 'RegistrRF':
+                $options['map'] = [
+                    $this->getFieldOptionValueId('Постоянная', $field) => ['additionalFieldregistrationPlace'],
+                ];
+                $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
+                break;
+                
+                
+            case 'RegistrRF':
+                $options['map'] = [
+                    $this->getFieldOptionValueId('Временная', $field) => ['additionalFieldregistrationPlace'],
+                ];
+                $this->addChoiceFieldMaskTypeField($formMapper, $field, $options);
+                break;
+                
+                
+                
 
             case 'pensionReason':
                 $options['map'] = [
