@@ -130,14 +130,13 @@
         });
     </script>
     
-<script>
+    <script>
     
-
-    $('#sonata-ba-field-container-s5fa28d8fb9a45_additionalField10004').before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
-
-    $('#card-header').wrapAll('<div id="accordion"></div>');
-    
-</script>
+        $('#*additionalField10004, #*additionalFielddeathDate').wrapAll($('<div id="collapseOne" class="collapse show" data-parent="#accordion"><div class="card-body">'));
+        $('#*additionalField10004').before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
+        $('#collapseOne').wrapAll('<div id="accordion"></div>');
+        
+    </script>
 
 
     <style>
