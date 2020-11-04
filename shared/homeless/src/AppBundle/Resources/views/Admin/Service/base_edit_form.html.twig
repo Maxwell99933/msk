@@ -135,6 +135,8 @@
         $('.form-group').wrapAll('<div id="accordion"></div>');
         $('.form-group').slice(8, 15).wrapAll('<div class="card"></div>');
         $('.form-group').slice(8, 9).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>');
+        $('.form-group').slice(8, 15).wrapAll('<div id="collapseOne" class="collapse show" data-parent="#accordion"></div>');
+        $('.form-group').slice(8, 15).wrapAll('<div class="card-body"></div>');
         
     </script>
 
