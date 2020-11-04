@@ -131,11 +131,13 @@
     </script>
     
 <script>
-    $('.form-group').wrapAll('<div id="accordion"></div>');
-    
-    $('#sonata-ba-field-container-s5fa28d8fb9a45_additionalField10004').before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
     
     $('#sonata-ba-field-container-s5fa28d8fb9a45_additionalField10004, #sonata-ba-field-container-s5fa28d8fb9a45_additionalFielddeathDate').wrapAll($('<div id="collapseOne" class="collapse show" data-parent="#accordion"><div class="card-body">'));
+
+    $('#sonata-ba-field-container-s5fa28d8fb9a45_additionalField10004').before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
+
+    $('#collapseOne').wrapAll('<div id="accordion"></div>');
+    
 </script>
 
 
