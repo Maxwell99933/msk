@@ -132,8 +132,8 @@
     
     <script>
     
-        $('#*additionalField10004, #*additionalFielddeathDate').wrapAll($('<div id="collapseOne" class="collapse show" data-parent="#accordion"><div class="card-body">'));
-        $('#*additionalField10004').before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
+        $(('.form-group').slice(1, 5)).wrapAll($('<div id="collapseOne" class="collapse show" data-parent="#accordion"><div class="card-body">'));
+        $(('.form-group').slice(1, 2)).before($('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>'));
         $('#collapseOne').wrapAll('<div id="accordion"></div>');
         
     </script>
