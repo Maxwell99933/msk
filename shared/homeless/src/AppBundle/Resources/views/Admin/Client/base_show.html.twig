@@ -118,6 +118,14 @@
         $('tr.toptable:contains("Проживание в приюте")').remove();
         $('tr.toptable:contains("Дата добавления")').remove();
         
+                var CARD = $('tr.toptable:contains("ID") > div.col-md-6').text();
+
+        $('tr.toptable:contains("ID")').remove();
+
+        $('tr.toptable:contains("Контактная информация")').after('<tr style="height:29px" class="sonata-ba-view-container toptable toptableProbel"><th></th><td></td></tr>');
+
+        $('tr.toptableProbel').after('<tr class="sonata-ba-view-container toptable"><th>Карта №</th><td>' + CARD + '</td></tr>');
+        
     </script>
             </div>
         {% endif %}
