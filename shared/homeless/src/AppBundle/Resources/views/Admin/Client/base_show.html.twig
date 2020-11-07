@@ -84,7 +84,7 @@
         $('div.dopInf:contains("Дата регистрации")').css('background-color', 'red');
         $('div.dopInf:contains("С правилами ознакомлен")').css('background-color', 'red');
         
-        var Group = $('div.dopInf:contains("Группа")').text()
+        var Group = $('div.dopInf:contains("Группа") > div.col-md-6').text();
         alert(Group);
 </script>
             </div>
