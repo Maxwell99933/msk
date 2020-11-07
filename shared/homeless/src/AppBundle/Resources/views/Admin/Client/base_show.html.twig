@@ -51,7 +51,7 @@
                                     {% endif %}
                                     <td width="33%">
                                         {% if elements[field_name] is defined %}
-                                            <div class="col-md-12 no-padding">
+                                            <div class="col-md-12 dopInf no-padding">
                                                 <div class="col-md-5 no-padding">
                                                     <strong>{{ elements[field_name].options.label }}</strong>
                                                 </div>
@@ -78,11 +78,11 @@
                     </div>
                 </div>
                                                 <script>
-        $('div.col-md-12:contains("Группа")').css('background-color', 'red');
-        $('div.col-md-12:contains("Контактная информация")').css('background-color', 'red');
-        $('div.col-md-12:contains("Статус")').css('background-color', 'red');
-        $('div.col-md-12:contains("Дата регистрации")').css('background-color', 'red');
-        $('div.col-md-12:contains("С правилами ознакомлен")').css('background-color', 'red');
+        $('div.dopInf:contains("Группа")').css('background-color', 'red');
+        $('div.dopInf:contains("Контактная информация")').css('background-color', 'red');
+        $('div.dopInf:contains("Статус")').css('background-color', 'red');
+        $('div.dopInf:contains("Дата регистрации")').css('background-color', 'red');
+        $('div.dopInf:contains("С правилами ознакомлен")').css('background-color', 'red');
 </script>
             </div>
         {% endif %}
