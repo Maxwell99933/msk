@@ -96,7 +96,13 @@
         $('tr:contains("Контактная информация")').after('<tr class="sonata-ba-view-container"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
         $('tr:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
         $('tr:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container"><th>Статус</th><td>' + Stat + '</td></tr>');
-</script>
+        
+        $('div.dopInf:contains("Обратить внимание")').css('background-color', 'red');
+
+        var MoreWaring = $('div.dopInf:contains("С правилами ознакомлен") > div.col-md-6').text();
+
+        $('div.lastPrim').before('<div class="col-md-6">div class="box-header"><h4 class="box-title">Обратить внимание</h4></div><p>' + MoreWaring + '</p></div>');
+    </script>
             </div>
         {% endif %}
     {% endfor %}
