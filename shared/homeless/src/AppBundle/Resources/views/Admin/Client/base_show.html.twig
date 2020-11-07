@@ -100,8 +100,8 @@
         $('tr.toptable:contains("Статус")').remove();
 
         $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container toptable"><th>Группа</th><td>' + Group + '</td></tr>');
-        $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container toptable"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
-        $('tr.toptable:contains("Контактная информация")').after('<tr class="sonata-ba-view-container toptable"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
+        $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container toptable"><th>Контакты</th><td>' + Cont + '</td></tr>');
+        $('tr.toptable:contains("Контакты")').after('<tr class="sonata-ba-view-container toptable"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
         $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container toptable"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
         $('tr.toptable:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container toptable"><th>Статус</th><td>' + Stat + '</td></tr>');
         
@@ -118,11 +118,11 @@
         $('tr.toptable:contains("Проживание в приюте")').remove();
         $('tr.toptable:contains("Дата добавления")').remove();
         
-                var CARD = $('tr.toptable:contains("ID") > div.col-md-6').text();
+                var CARD = $('tr.toptable:contains("ID") > th').text();
 
+        $('tr.toptable:contains("ID")').remove();
 
-
-        $('tr.toptable:contains("Контактная информация")').after('<tr style="height:29px" class="sonata-ba-view-container toptable toptableProbel"><th></th><td></td></tr>');
+        $('tr.toptable:contains("Контакты")').after('<tr style="height:29px" class="sonata-ba-view-container toptable toptableProbel"><th></th><td></td></tr>');
 
         $('tr.toptableProbel').after('<tr class="sonata-ba-view-container toptable"><th>Карта №</th><td>' + CARD + '</td></tr>');
         
