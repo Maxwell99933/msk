@@ -90,6 +90,12 @@
         var Stat = $('div.dopInf:contains("Статус") > div.col-md-6').text();
         var DatReg = $('div.dopInf:contains("Дата регистрации") > div.col-md-6').text();
         var Rules = $('div.dopInf:contains("С правилами ознакомлен") > div.col-md-6').text();
+        
+                $('div.dopInf:contains("Группа")').remove();
+        $('div.dopInf:contains("Контактная информация")').remove();
+        $('div.dopInf:contains("Статус")').remove();
+        $('div.dopInf:contains("Дата регистрации")').remove();
+        $('div.dopInf:contains("С правилами ознакомлен")').remove();
 
         $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container toptable"><th>Группа</th><td>' + Group + '</td></tr>');
         $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container toptable"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
