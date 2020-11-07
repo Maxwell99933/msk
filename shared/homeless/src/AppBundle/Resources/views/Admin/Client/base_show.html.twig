@@ -19,7 +19,7 @@
                             <tbody>
                             {% for field_name in show_group.fields %}
                                 {% block show_field %}
-                                    <tr class="sonata-ba-view-container">
+                                    <tr class="sonata-ba-view-container toptable">
                                         {% if elements[field_name] is defined %}
                                             {{ elements[field_name]|render_view_element(object) }}
                                         {% endif %}
@@ -91,11 +91,11 @@
         var DatReg = $('div.dopInf:contains("Дата регистрации") > div.col-md-6').text();
         var Rules = $('div.dopInf:contains("С правилами ознакомлен") > div.col-md-6').text();
 
-        $('tr:contains("Дата рождения")').after('<tr class="sonata-ba-view-container"><th>Группа</th><td>' + Group + '</td></tr>');
-        $('tr:contains("Группа")').after('<tr class="sonata-ba-view-container"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
-        $('tr:contains("Контактная информация")').after('<tr class="sonata-ba-view-container"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
-        $('tr:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
-        $('tr:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container"><th>Статус</th><td>' + Stat + '</td></tr>');
+        $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container"><th>Группа</th><td>' + Group + '</td></tr>');
+        $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
+        $('tr.toptable:contains("Контактная информация")').after('<tr class="sonata-ba-view-container"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
+        $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
+        $('tr.toptable:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container"><th>Статус</th><td>' + Stat + '</td></tr>');
         
         $('div.dopInf:contains("Обратить внимание")').css('background-color', 'red');
 
