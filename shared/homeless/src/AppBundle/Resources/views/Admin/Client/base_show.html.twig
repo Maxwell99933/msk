@@ -91,11 +91,11 @@
         var DatReg = $('div.dopInf:contains("Дата регистрации") > div.col-md-6').text();
         var Rules = $('div.dopInf:contains("С правилами ознакомлен") > div.col-md-6').text();
 
-        $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container"><th>Группа</th><td>' + Group + '</td></tr>');
-        $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
-        $('tr.toptable:contains("Контактная информация")').after('<tr class="sonata-ba-view-container"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
-        $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
-        $('tr.toptable:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container"><th>Статус</th><td>' + Stat + '</td></tr>');
+        $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container toptable"><th>Группа</th><td>' + Group + '</td></tr>');
+        $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container toptable"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
+        $('tr.toptable:contains("Контактная информация")').after('<tr class="sonata-ba-view-container toptable"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
+        $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container toptable"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
+        $('tr.toptable:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container toptable"><th>Статус</th><td>' + Stat + '</td></tr>');
         
         $('div.dopInf:contains("Обратить внимание")').css('background-color', 'red');
 
