@@ -5,7 +5,7 @@
         {% set show_group = admin.showgroups[code] %}
 
         {% if show_group.type  is not defined or show_group.type != 'additional-info' %}
-            <div class="{{ show_group.class|default('col-md-6') }} {{ no_padding|default(false) ? 'nopadding' }} client-show">
+            <div class="{{ show_group.class|default('col-md-6 lastPrim') }} {{ no_padding|default(false) ? 'nopadding' }} client-show">
                 <div class="{{ show_group.box_class }}">
                     <div class="box-header">
                         <h4 class="box-title">
@@ -30,13 +30,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                    <div class="box-header">
-                        <h4 class="box-title">
-                            Обратить внимание
-                        </h4>
-                    </div>
             </div>
         {% else %}
             <div class="{{ show_group.class|default('col-md-12') }} {{ no_padding|default(false) ? 'nopadding' }} client-show">
