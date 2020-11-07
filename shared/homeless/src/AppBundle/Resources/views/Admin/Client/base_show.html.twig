@@ -6,7 +6,7 @@
 
         {% if show_group.type  is not defined or show_group.type != 'additional-info' %}
                                 <script>
-$('strong:contains("Группа")').css('background-color', 'red');
+$('div.col-md-5:contains("Группа")').css('background-color', 'red');
 </script>
             <div class="{{ show_group.class|default('col-md-12') }} {{ no_padding|default(false) ? 'nopadding' }} client-show">
                 <div class="{{ show_group.box_class }}">
