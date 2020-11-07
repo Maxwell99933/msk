@@ -5,9 +5,6 @@
         {% set show_group = admin.showgroups[code] %}
 
         {% if show_group.type  is not defined or show_group.type != 'additional-info' %}
-                                <script>
-$('div.col-md-5:contains("Группа")').css('background-color', 'red');
-</script>
             <div class="{{ show_group.class|default('col-md-12') }} {{ no_padding|default(false) ? 'nopadding' }} client-show">
                 <div class="{{ show_group.box_class }}">
                     <div class="box-header">
@@ -80,6 +77,9 @@ $('div.col-md-5:contains("Группа")').css('background-color', 'red');
                         </table>
                     </div>
                 </div>
+                                                <script>
+$('div.col-md-5:contains("Группа")').css('background-color', 'red');
+</script>
             </div>
         {% endif %}
     {% endfor %}
