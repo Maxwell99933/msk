@@ -96,6 +96,8 @@
         $('div.dopInf:contains("Статус")').remove();
         $('div.dopInf:contains("Дата регистрации")').remove();
         $('div.dopInf:contains("С правилами ознакомлен")').remove();
+        
+        $('tr.toptable:contains("Статус")').remove();
 
         $('tr.toptable:contains("Дата рождения")').after('<tr class="sonata-ba-view-container toptable"><th>Группа</th><td>' + Group + '</td></tr>');
         $('tr.toptable:contains("Группа")').after('<tr class="sonata-ba-view-container toptable"><th>Контактная информация</th><td>' + Cont + '</td></tr>');
@@ -110,6 +112,12 @@
         $('div.dopInf:contains("Обратить внимание")').remove();
 
         $('div.lastPrim').before('<div class="col-md-6 client-show"><div class="box box-primary"><div class="box-header"><h4 class="box-title">Обратить внимание</h4></div><p>' + MoreWaring + '</p></div></div>');
+        
+                $('tr.toptable:contains("Пол")').remove();
+        $('tr.toptable:contains("Место рождения")').remove();
+        $('tr.toptable:contains("Проживание в приюте")').remove();
+        $('tr.toptable:contains("Дата добавления")').remove();
+        
     </script>
             </div>
         {% endif %}
