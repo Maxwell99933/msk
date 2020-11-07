@@ -88,7 +88,7 @@
         var Group = $('div.dopInf:contains("Группа") > div.col-md-6').text();
         alert(Group);
         
-         $('tr:contains("Дата рождения")').after('<tr class="sonata-ba-view-container"><th>Группа</th><td>TEST</td></tr>');
+         $('tr:contains("Дата рождения")').after('<tr class="sonata-ba-view-container"><th>Группа</th><td>' + Group + '</td></tr>');
 </script>
             </div>
         {% endif %}
