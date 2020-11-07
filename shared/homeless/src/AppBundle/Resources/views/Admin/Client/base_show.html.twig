@@ -85,6 +85,9 @@
 {% block title %}
     {{ "title_show"|trans({'%name%': admin.toString(object)|truncate(15) }, 'SonataAdminBundle') }}
     <script>
+    $('th:contains("ФИО")').css('background-color', 'red');
+</script>
+    <script>
         $(document).ready(function () {
             if ($('.changeSelectinsData').parents('.form-group').find('[type="checkbox"]').prop('checked')) {
                 $('.select2-result-label,.select2-chosen').each(function (key, item) {
