@@ -39,7 +39,7 @@
                             {{ show_group.label|trans({}, show_group.translation_domain|default(admin.translationDomain)) }}
                         </h4>
                     </div>
-                    <div class="box-body no-padding">
+                    <div class="box-body BOXDOP no-padding">
                         <table class="table table-bordered">
                             <tbody>
                             {% set i = 0 %}
@@ -126,6 +126,13 @@
 
         $('tr.toptableProbel').after('<tr class="sonata-ba-view-container toptable"><th>Карта №</th><td>' + CARD + '</td></tr>');
         
+        var SranaRojd = $('div.dopInf:contains("Страна рождения") > div.col-md-6').text();
+        var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
+        
+        $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
+        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
+
+        $('.StolbF').wrapAll('<div class="col-md-4"></div>');
     </script>
             </div>
         {% endif %}
