@@ -129,10 +129,15 @@
         var SranaRojd = $('div.dopInf:contains("Страна рождения") > div.col-md-6').text();
         var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
         
-        $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
-        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
+        $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
+        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
 
         $('.StolbF').wrapAll('<div class="col-md-4"></div>');
+        
+        $('.ANK').wrapAll('<div class="card"></div>');
+        $('.ANK').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapse">Анкетные данные</a></div>');
+        $('.ANK').wrapAll('<div id="collapse" class="collapse" data-parent="#accordion"></div>');
+        $('.ANK').wrapAll('<div class="card-body"></div>');
     </script>
             </div>
         {% endif %}
