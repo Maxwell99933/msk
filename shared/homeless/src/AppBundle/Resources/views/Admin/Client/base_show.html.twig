@@ -130,7 +130,7 @@
         var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
         
         $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
-        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div>' + gender + '</div>');
+        $('div.ANK:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div>' + gender + '</div>');
 
         $('div.StolbF:contains("Пол")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
         $('div.StolbF:contains("Гражданство")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Документы есть?</div>' + Doc + '</div>');
