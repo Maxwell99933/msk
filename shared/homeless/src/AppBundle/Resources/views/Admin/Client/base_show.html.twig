@@ -113,6 +113,8 @@
 
         $('div.lastPrim').before('<div class="col-md-6 client-show"><div class="box box-primary"><div class="box-header"><h4 class="box-title">Обратить внимание</h4></div><p>' + MoreWaring + '</p></div></div>');
         
+        var gender = $('tr:contains("С правилами ознакомлен") > div.col-md-6').text();
+        
                 $('tr.toptable:contains("Пол")').remove();
         $('tr.toptable:contains("Место рождения")').remove();
         $('tr.toptable:contains("Проживание в приюте")').remove();
@@ -129,8 +131,59 @@
         var SranaRojd = $('div.dopInf:contains("Страна рождения") > div.col-md-6').text();
         var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
         
-        $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
-        $('div:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div>' + gender + '</div>');
+        
+         var SranaRojd = $('div.dopInf:contains("Страна рождения") > div.col-md-6').text();
+        var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
+        var Doc = $('div.dopInf:contains("Документы есть?") > div.col-md-6').text();
+        var WhatDoc = $('div.dopInf:contains("Какие документы?") > div.col-md-6').text();
+        var RegRF = $('div.dopInf:contains("Регистрация в РФ") > div.col-md-6').text();
+        var MestoPosl = $('div.dopInf:contains("Место последней регистрации") > div.col-md-6').text();
+        var RodZan = $('div.dopInf:contains("Род занятий") > div.col-md-6').text();
+        var IstSush = $('div.dopInf:contains("Источники существования") > div.col-md-6').text();
+        var OsnIstSush = $('div.dopInf:contains("Основной источник существования") > div.col-md-6').text();
+        var Pens = $('div.dopInf:contains("Пенсионер") > div.col-md-6').text();
+        var PensRizon = $('div.dopInf:contains("Причина пенсии") > div.col-md-6').text();
+        var JilPL = $('div.dopInf:contains("Проживает в жилом помещении") > div.col-md-6').text();
+        var JilPLGde = $('div.dopInf:contains("Уточнить, где сейчас проживает?") > div.col-md-6').text();
+
+        var RegPoMJ = $('div.dopInf:contains("Регистрация по месту жительства") > div.col-md-6').text();
+        var SitWhen = $('div.dopInf:contains("Когда возникла ситуация, которая заставила обратиться за помощью?") > div.col-md-6').text();
+        var Child = $('div.dopInf:contains("Дети есть?") > div.col-md-6').text();
+        var ChildMore = $('div.dopInf:contains("Дети") > div.col-md-6').text();
+        var RodstvNaPop = $('div.dopInf:contains("Родственники на попечении") > div.col-md-6').text();
+        var SemPol = $('div.dopInf:contains("Семейное положение") > div.col-md-6').text();
+        var KontRod = $('div.dopInf:contains("Контакты с родственниками") > div.col-md-6').text();
+        var SkemJiv = $('div.dopInf:contains("С кем проживает?") > div.col-md-6').text();
+        var SkemNaSV = $('div.dopInf:contains("С кем на связи?") > div.col-md-6').text();
+        var RizBezd = $('div.dopInf:contains("Причины бездомности") > div.col-md-6').text();
+        var Work = $('div.dopInf:contains("Работает?") > div.col-md-6').text();
+        var WorkProf = $('div.dopInf:contains("Кем и где работает?") > div.col-md-6').text();
+        var Obraz = $('div.dopInf:contains("Образование") > div.col-md-6').text();
+        var FindWork = $('div.dopInf:contains("Ищет работу") > div.col-md-6').text();
+        var NalProf = $('div.dopInf:contains("Наличие профессии") > div.col-md-6').text();
+        var Prof = $('div.dopInf:contains("Профессия") > div.col-md-6').text();
+
+        var WhenMigr = $('div.dopInf:contains("Когда приехал в данный регион?") > div.col-md-6').text();
+        var MigTarg = $('div.dopInf:contains("С какой целью?") > div.col-md-6').text();
+        var FromMig = $('div.dopInf:contains("Откуда приехал?") > div.col-md-6').text();
+        var DifRegRF = $('div.dopInf:contains("Другой регион РФ") > div.col-md-6').text();
+        var SpeakRF = $('div.dopInf:contains("Говорит по-русски?") > div.col-md-6').text();
+        var LangVlad = $('div.dopInf:contains("Какими языками владеет?") > div.col-md-6').text();
+        var LangVladMore = $('div.dopInf:contains("Какими языками владеет? (Другие)") > div.col-md-6').text();
+        var VipDetDom = $('div.dopInf:contains("Выпускник детдома") > div.col-md-6').text();
+        var MestaLishSvob = $('div.dopInf:contains("Был(а) в МЛС") > div.col-md-6').text();
+        var HronBol = $('div.dopInf:contains("Хронические болезни") > div.col-md-6').text();
+        var HronBolMore = $('div.dopInf:contains("Хронические болезни (другое)") > div.col-md-6').text();
+        var Phone = $('div.dopInf:contains("Телефон") > div.col-md-6').text();
+        var Email = $('div.dopInf:contains("E-mail") > div.col-md-6').text();
+        var SocMed = $('div.dopInf:contains("Соцсети") > div.col-md-6').text();
+        var ContNaSpecSluch = $('div.dopInf:contains("Контакты родств. / друзей в случае необходимости") > div.col-md-6').text();
+        
+        
+        
+        
+                $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div><div class="col-md-6 no-padding">' + SranaRojd + '</div></div>');
+        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div><div class="col-md-6 no-padding">' + gender + '</div></div>');
 
         $('div.StolbF:contains("Пол")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
         $('div.StolbF:contains("Гражданство")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Документы есть?</div>' + Doc + '</div>');
