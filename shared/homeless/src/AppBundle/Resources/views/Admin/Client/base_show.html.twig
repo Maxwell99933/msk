@@ -130,14 +130,37 @@
         var Grajd = $('div.dopInf:contains("Гражданство") > div.col-md-6').text();
         
         $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div>' + SranaRojd + '</div>');
-        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
+        $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div>' + gender + '</div>');
+
+        $('div.StolbF:contains("Пол")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
+        $('div.StolbF:contains("Гражданство")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Документы есть?</div>' + Doc + '</div>');
+        $('div.StolbF:contains("Документы есть?")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Какие документы?</div>' + WhatDoc + '</div>');
+        $('div.StolbF:contains("Какие документы?")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Регистрация в РФ</div>' + RegRF + '</div>');
+        $('div.StolbF:contains("Регистрация в РФ")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Место последней регистрации</div>' + MestoPosl + '</div>');
+
+
+        $('div.StolbF:contains("Место последней регистрации")').after('<div class="col-md-12 no-padding StolbF EcoST"><div class="col-md-5 no-padding">Род занятий</div>' + RodZan + '</div>');
+        $('div.StolbF:contains("Род занятий")').after('<div class="col-md-12 no-padding StolbF EcoST"><div class="col-md-5 no-padding">Источники существования</div>' + IstSush + '</div>');
+        $('div.StolbF:contains("Источники существования")').after('<div class="col-md-12 no-padding StolbF EcoST"><div class="col-md-5 no-padding">Основной источник существования</div>' + OsnIstSush + '</div>');
+        $('div.StolbF:contains("Основной источник существования")').after('<div class="col-md-12 no-padding StolbF EcoST"><div class="col-md-5 no-padding">Пенсионер</div>' + Pens + '</div>');
+        $('div.StolbF:contains("Пенсионер")').after('<div class="col-md-12 no-padding StolbF EcoST"><div class="col-md-5 no-padding">Причина пенсии</div>' + PensRizon + '</div>');
 
         $('.StolbF').wrapAll('<div class="col-md-4"></div>');
-        
+
         $('.ANK').wrapAll('<div class="card"></div>');
-        $('.BOXDOP').prepend('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapse">Анкетные данные</a></div>');
+        $('div.StolbF:contains("Страна рождения")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapse">Анкетные данные</a></div>');
         $('.ANK').wrapAll('<div id="collapse" class="collapse" data-parent="#accordion"></div>');
         $('.ANK').wrapAll('<div class="card-body"></div>');
+
+        $('.PravS').wrapAll('<div class="card"></div>');
+        $('div.StolbF:contains("Гражданство")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapse">Анкетные данные</a></div>');
+        $('.PravS').wrapAll('<div id="collapse" class="collapse" data-parent="#accordion"></div>');
+        $('.PravS').wrapAll('<div class="card-body"></div>');
+
+        $('.EcoST').wrapAll('<div class="card"></div>');
+        $('div.StolbF:contains("Род занятий")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapse">Анкетные данные</a></div>');
+        $('.EcoST').wrapAll('<div id="collapse" class="collapse" data-parent="#accordion"></div>');
+        $('.EcoST').wrapAll('<div class="card-body"></div>');
     </script>
             </div>
         {% endif %}
