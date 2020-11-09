@@ -182,7 +182,7 @@
         
         
         
-          $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div><div class="col-md-6 no-padding">' + SranaRojd + '</div></div>');
+        $(".BOXDOP").prepend('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Страна рождения</div><div class="col-md-6 no-padding">' + SranaRojd + '</div></div>');
         $('div.StolbF:contains("Страна рождения")').after('<div class="col-md-12 no-padding StolbF ANK"><div class="col-md-5 no-padding">Пол</div><div class="col-md-6 no-padding">' + gender + '</div></div>');
 
         $('div.StolbF:contains("Пол")').after('<div class="col-md-12 no-padding StolbF PravS"><div class="col-md-5 no-padding">Гражданство</div>' + Grajd + '</div>');
@@ -201,47 +201,50 @@
         //След столбец
 
         $('div.StolbF:contains("Причина пенсии")').after('<div class="col-md-12 no-padding StolbS MestoJ"><div class="col-md-5 no-padding">Проживает в жилом помещении</div>' + JilPL + '</div>');
-        $('div.StolbF:contains("Проживает в жилом помещении")').after('<div class="col-md-12 no-padding StolbS MestoJ"><div class="col-md-5 no-padding">Уточнить, где сейчас проживает?</div>' + JilPLGde + '</div>');
-        $('div.StolbF:contains("Уточнить, где сейчас проживает?")').after('<div class="col-md-12 no-padding StolbS MestoJ"><div class="col-md-5 no-padding">Регистрация по месту жительства</div>' + RegPoMJ + '</div>');
+        $('div.StolbS:contains("Проживает в жилом помещении")').after('<div class="col-md-12 no-padding StolbS MestoJ"><div class="col-md-5 no-padding">Уточнить, где сейчас проживает?</div>' + JilPLGde + '</div>');
+        $('div.StolbS:contains("Уточнить, где сейчас проживает?")').after('<div class="col-md-12 no-padding StolbS MestoJ"><div class="col-md-5 no-padding">Регистрация по месту жительства</div>' + RegPoMJ + '</div>');
 
-        $('div.StolbF:contains("Регистрация по месту жительства")').after('<div class="col-md-12 no-padding StolbS RizObr"><div class="col-md-5 no-padding">Когда возникла ситуация, которая заставила обратиться за помощью?</div>' + SitWhen + '</div>');
+        $('div.StolbS:contains("Регистрация по месту жительства")').after('<div class="col-md-12 no-padding StolbS RizObr"><div class="col-md-5 no-padding">Когда возникла ситуация, которая заставила обратиться за помощью?</div>' + SitWhen + '</div>');
 
-        $('div.StolbF:contains("Когда возникла ситуация, которая заставила обратиться за помощью?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Дети есть?</div>' + Child + '</div>');
-        $('div.StolbF:contains("Дети есть?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Дети</div>' + ChildMore + '</div>');
-        $('div.StolbF:contains("Дети")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Родственники на попечении</div>' + RodstvNaPop + '</div>');
-        $('div.StolbF:contains("Родственники на попечении")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Семейное положение</div>' + SemPol + '</div>');
-        $('div.StolbF:contains("Семейное положение")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Контакты с родственниками</div>' + KontRod + '</div>');
-        $('div.StolbF:contains("Контакты с родственниками")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">С кем проживает?</div>' + SkemJiv + '</div>');
-        $('div.StolbF:contains("С кем проживает?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">С кем на связи?</div>' + SkemNaSV + '</div>');
-        $('div.StolbF:contains("С кем на связи?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Причины бездомности</div>' + RizBezd + '</div>');
+        $('div.StolbS:contains("Когда возникла ситуация, которая заставила обратиться за помощью?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Дети есть?</div>' + Child + '</div>');
+        $('div.StolbS:contains("Дети есть?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Дети</div>' + ChildMore + '</div>');
+        $('div.StolbS:contains("Дети")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Родственники на попечении</div>' + RodstvNaPop + '</div>');
+        $('div.StolbS:contains("Родственники на попечении")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Семейное положение</div>' + SemPol + '</div>');
+        $('div.StolbS:contains("Семейное положение")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Контакты с родственниками</div>' + KontRod + '</div>');
+        $('div.StolbS:contains("Контакты с родственниками")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">С кем проживает?</div>' + SkemJiv + '</div>');
+        $('div.StolbS:contains("С кем проживает?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">С кем на связи?</div>' + SkemNaSV + '</div>');
+        $('div.StolbS:contains("С кем на связи?")').after('<div class="col-md-12 no-padding StolbS SocSit"><div class="col-md-5 no-padding">Причины бездомности</div>' + RizBezd + '</div>');
 
-        $('div.StolbF:contains("Причины бездомности")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Работает?</div>' + Work + '</div>');
-        $('div.StolbF:contains("Работает?")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Кем и где работает?</div>' + WorkProf + '</div>');
-        $('div.StolbF:contains("Кем и где работает?")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Образование</div>' + Obraz + '</div>');
-        $('div.StolbF:contains("Образование")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Ищет работу</div>' + FindWork + '</div>');
-        $('div.StolbF:contains("Ищет работу")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Наличие профессии</div>' + NalProf + '</div>');
-        $('div.StolbF:contains("Наличие профессии")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Профессия</div>' + Prof + '</div>');
+        $('div.StolbS:contains("Причины бездомности")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Работает?</div>' + Work + '</div>');
+        $('div.StolbS:contains("Работает?")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Кем и где работает?</div>' + WorkProf + '</div>');
+        $('div.StolbS:contains("Кем и где работает?")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Образование</div>' + Obraz + '</div>');
+        $('div.StolbS:contains("Образование")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Ищет работу</div>' + FindWork + '</div>');
+        $('div.StolbS:contains("Ищет работу")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Наличие профессии</div>' + NalProf + '</div>');
+        $('div.StolbS:contains("Наличие профессии")').after('<div class="col-md-12 no-padding StolbS Rab"><div class="col-md-5 no-padding">Профессия</div>' + Prof + '</div>');
 
 
         //След столбец
 
-        $('div.StolbF:contains("Профессия")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Когда приехал в данный регион?</div>' + WhenMigr + '</div>');
-        $('div.StolbF:contains("Когда приехал в данный регион?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">С какой целью?</div>' + MigTarg + '</div>');
-        $('div.StolbF:contains("С какой целью?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Откуда приехал?</div>' + FromMig + '</div>');
-        $('div.StolbF:contains("Откуда приехал?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Другой регион РФ</div>' + DifRegRF + '</div>');
-        $('div.StolbF:contains("Другой регион РФ")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Говорит по-русски?</div>' + SpeakRF + '</div>');
-        $('div.StolbF:contains("Говорит по-русски?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Какими языками владеет?</div>' + LangVlad + '</div>');
-        $('div.StolbF:contains("Какими языками владеет?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Какими языками владеет? (Другие)</div>' + LangVladMore + '</div>');
+        $('div.StolbS:contains("Профессия")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Когда приехал в данный регион?</div>' + WhenMigr + '</div>');
+        $('div.StolbT:contains("Когда приехал в данный регион?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">С какой целью?</div>' + MigTarg + '</div>');
+        $('div.StolbT:contains("С какой целью?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Откуда приехал?</div>' + FromMig + '</div>');
+        $('div.StolbT:contains("Откуда приехал?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Другой регион РФ</div>' + DifRegRF + '</div>');
+        $('div.StolbT:contains("Другой регион РФ")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Говорит по-русски?</div>' + SpeakRF + '</div>');
+        $('div.StolbT:contains("Говорит по-русски?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Какими языками владеет?</div>' + LangVlad + '</div>');
+        $('div.StolbT:contains("Какими языками владеет?")').after('<div class="col-md-12 no-padding StolbT MIG"><div class="col-md-5 no-padding">Какими языками владеет? (Другие)</div>' + LangVladMore + '</div>');
 
-        $('div.StolbF:contains("Какими языками владеет? (Другие)")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Выпускник детдома</div>' + VipDetDom + '</div>');
-        $('div.StolbF:contains("Выпускник детдома")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Был(а) в МЛС</div>' + MestaLishSvob + '</div>');
-        $('div.StolbF:contains("Был(а) в МЛС")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Хронические болезни</div>' + HronBol + '</div>');
-        $('div.StolbF:contains("Хронические болезни")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Хронические болезни (другое)</div>' + HronBolMore + '</div>');
+        $('div.StolbT:contains("Какими языками владеет? (Другие)")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Выпускник детдома</div>' + VipDetDom + '</div>');
+        $('div.StolbT:contains("Выпускник детдома")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Был(а) в МЛС</div>' + MestaLishSvob + '</div>');
+        $('div.StolbT:contains("Был(а) в МЛС")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Хронические болезни</div>' + HronBol + '</div>');
+        $('div.StolbT:contains("Хронические болезни")').after('<div class="col-md-12 no-padding StolbT Osob"><div class="col-md-5 no-padding">Хронические болезни (другое)</div>' + HronBolMore + '</div>');
 
-        $('div.StolbF:contains("Хронические болезни (другое)")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Телефон</div>' + Phone + '</div>');
-        $('div.StolbF:contains("Телефон")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">E-mail</div>' + Email + '</div>');
-        $('div.StolbF:contains("E-mail")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Соцсети</div>' + SocMed + '</div>');
-        $('div.StolbF:contains("Соцсети")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Контакты родств. / друзей в случае необходимости</div>' + ContNaSpecSluch + '</div>');
+        $('div.StolbT:contains("Хронические болезни (другое)")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Телефон</div>' + Phone + '</div>');
+        $('div.StolbT:contains("Телефон")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">E-mail</div>' + Email + '</div>');
+        $('div.StolbT:contains("E-mail")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Соцсети</div>' + SocMed + '</div>');
+        $('div.StolbT:contains("Соцсети")').after('<div class="col-md-12 no-padding StolbT CNT"><div class="col-md-5 no-padding">Контакты родств. / друзей в случае необходимости</div>' + ContNaSpecSluch + '</div>');
+
+
+
 
 
 
@@ -268,37 +271,37 @@
         $('.EcoST').wrapAll('<div class="card-body"></div>');
 
         $('.MestoJ').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Проживает в жилом помещении")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseMJ">Место жительства</a></div>');
+        $('div.StolbS:contains("Проживает в жилом помещении")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseMJ">Место жительства</a></div>');
         $('.MestoJ').wrapAll('<div id="collapseMJ" class="collapse" data-parent="#accordion"></div>');
         $('.MestoJ').wrapAll('<div class="card-body"></div>');
 
         $('.RizObr').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Когда возникла ситуация, которая заставила обратиться за помощью?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseWSH">Причина обращения в центр</a></div>');
+        $('div.StolbS:contains("Когда возникла ситуация, которая заставила обратиться за помощью?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseWSH">Причина обращения в центр</a></div>');
         $('.RizObr').wrapAll('<div id="collapseWSH" class="collapse" data-parent="#accordion"></div>');
         $('.RizObr').wrapAll('<div class="card-body"></div>');
 
         $('.SocSit').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Дети есть?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSS">Социальная ситуация</a></div>');
+        $('div.StolbS:contains("Дети есть?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSS">Социальная ситуация</a></div>');
         $('.SocSit').wrapAll('<div id="collapseSS" class="collapse" data-parent="#accordion"></div>');
         $('.SocSit').wrapAll('<div class="card-body"></div>');
 
         $('.Rab').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Работает?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseRab">Работа</a></div>');
+        $('div.StolbS:contains("Работает?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseRab">Работа</a></div>');
         $('.Rab').wrapAll('<div id="collapseRab" class="collapse" data-parent="#accordion"></div>');
         $('.Rab').wrapAll('<div class="card-body"></div>');
 
         $('.MIG').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Когда приехал в данный регион?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseMig">Миграция</a></div>');
+        $('div.StolbT:contains("Когда приехал в данный регион?")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseMig">Миграция</a></div>');
         $('.MIG').wrapAll('<div id="collapseMig" class="collapse" data-parent="#accordion"></div>');
         $('.MIG').wrapAll('<div class="card-body"></div>');
 
         $('.Osob').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Выпускник детдома")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOsob">Особые примечания</a></div>');
+        $('div.StolbT:contains("Выпускник детдома")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOsob">Особые примечания</a></div>');
         $('.Osob').wrapAll('<div id="collapseOsob" class="collapse" data-parent="#accordion"></div>');
         $('.Osob').wrapAll('<div class="card-body"></div>');
 
         $('.CNT').wrapAll('<div class="card"></div>');
-        $('div.StolbF:contains("Телефон")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseCNT">Контакты</a></div>');
+        $('div.StolbT:contains("Телефон")').before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseCNT">Контакты</a></div>');
         $('.CNT').wrapAll('<div id="collapseCNT" class="collapse" data-parent="#accordion"></div>');
         $('.CNT').wrapAll('<div class="card-body"></div>');
     </script>
