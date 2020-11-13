@@ -134,7 +134,8 @@
     
         $('.form-group').wrapAll('<div id="accordion"></div>');
         
-        
+        var AnkStart = $('.form-group:contains("Статус")').index();
+    alert('Index: ' + AnkStart);
         
         $('.form-group').slice(8, 15).wrapAll('<div class="card"></div>');
         $('.form-group').slice(8, 9).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>');
