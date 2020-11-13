@@ -267,7 +267,9 @@
    
         $('#pechat-button').click(alertName);
     
-
+        var NameIndex = $('.form-group:contains("Имя") > .form-control').index();
+        alert(NameIndex);
+        
     function alertName() {
         var Name = $('input.form-control').val();
         alert(Name);
