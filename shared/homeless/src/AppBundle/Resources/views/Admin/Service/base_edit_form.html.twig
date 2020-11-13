@@ -74,10 +74,10 @@
                         {% if app.request.isxmlhttprequest %}
                             {% if admin.id(object) is not null %}
                                 <button type="submit" class="btn btn-success" name="btn_update"><i class="fa fa-save" aria-hidden="true"></i> {{ 'btn_update'|trans({}, 'SonataAdminBundle') }}</button>
-                                <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                             {% else %}
                                 <button type="submit" class="btn btn-success" name="btn_create"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{ 'btn_create'|trans({}, 'SonataAdminBundle') }}</button>
-                                <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                             {% endif %}
                         {% else %}
                             {% if admin.supportsPreviewMode %}
@@ -90,9 +90,9 @@
                                 {% if admin.hasRoute('list') and admin.hasAccess('list') %}
                                     {% if admin.code == "app.client.admin" %}
                                         <button type="submit" class="btn btn-success" name="btn_update_and_show"><i class="fa fa-save" aria-hidden="true"></i> {{ 'btn_update'|trans({}, 'SonataAdminBundle') }}</button>
-                                        <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                        <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                                     {% else %}<button type="submit" class="btn btn-success" name="btn_update_and_list"><i class="fa fa-save"></i> <i class="fa fa-list" aria-hidden="true"></i>{{ 'btn_update_and_return_to_list'|trans({}, 'SonataAdminBundle') }}</button>
-                                    <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                    <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                                     {% endif %}
                                 {% endif %}
 
@@ -107,11 +107,11 @@
                             {% else %}
                                 {% if admin.code == "app.client.admin" %}
                                     <button type="submit" class="btn btn-success" name="btn_update_and_show"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{ 'btn_create'|trans({}, 'SonataAdminBundle') }}</button>
-                                   <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                   <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                                 {% else %}
                                     {% if admin.hasroute('list') and admin.hasAccess('list') %}
                                         <button type="submit" class="btn btn-success" name="btn_create_and_list"><i class="fa fa-save"></i> <i class="fa fa-list" aria-hidden="true"></i> {{ 'btn_create_and_return_to_list'|trans({}, 'SonataAdminBundle') }}</button>
-                                        <a class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
+                                        <a class="btn btn-success" id="pechat-button"><i class="fa fa-print" aria-hidden="true"></i>Печать</a>
                                     {% endif %}
                                 {% endif %}
                             {% endif %}
@@ -263,6 +263,15 @@
     
     var AlertStat = $('.form-group:contains("Статус") > #select2-chosen-2').text();
     //alert(AlertStat);
+    
+    function Pechat() {
+        $('#pechat-button').bind('click', alertName);
+    }
+
+    function alertName() {
+        var Name = $('.form-group:contains("Имя") > input').val();
+        alert(Name);
+    }
     </script>
 
 
