@@ -134,58 +134,85 @@
     
         $('.form-group').wrapAll('<div id="accordion"></div>');
         
-        var AnkStart = $('.form-group:contains("Статус")').index();
-    alert('Index: ' + AnkStart);
-        
-        $('.form-group').slice(AnkStart, 15).wrapAll('<div class="card"></div>');
-        $('.form-group').slice(AnkStart, AnkStart + 1 ).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>');
-        $('.form-group').slice(AnkStart, 15).wrapAll('<div id="collapseOne" class="collapse" data-parent="#accordion"></div>');
-        $('.form-group').slice(AnkStart, 15).wrapAll('<div class="card-body"></div>');
-        
-        $('.form-group').slice(15, 25).wrapAll('<div class="card"></div>');
-        $('.form-group').slice(15, 16).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseTwo">Правовой статус</a></div>');
-        $('.form-group').slice(15, 25).wrapAll('<div id="collapseTwo" class="collapse" data-parent="#accordion"></div>');
-        $('.form-group').slice(15, 25).wrapAll('<div class="card-body"></div>');
-        
-        $('.form-group').slice(25, 33).wrapAll('<div class="card"></div>');
-        $('.form-group').slice(25, 26).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseThree">Экономический статус</a></div>');
-        $('.form-group').slice(25, 33).wrapAll('<div id="collapseThree" class="collapse" data-parent="#accordion"></div>');
-        $('.form-group').slice(25, 33).wrapAll('<div class="card-body"></div>');
-    
-        $('.form-group').slice(33, 37).wrapAll('<div class="card"></div>');
-        $('.form-group').slice(33, 34).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseFour">Место жительства</a></div>');
-        $('.form-group').slice(33, 37).wrapAll('<div id="collapseFour" class="collapse" data-parent="#accordion"></div>');
-        $('.form-group').slice(33, 37).wrapAll('<div class="card-body"></div>');
-        
-    $('.form-group').slice(37, 38).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(37, 38).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseEight">Причина обращения в центр</a></div>');
-    $('.form-group').slice(37, 38).wrapAll('<div id="collapseEight" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(37, 38).wrapAll('<div class="card-body"></div>');
+        var AnkStart = $('.form-group:contains("AnkStart")').index();
+    var AnkEnd = $('.form-group:contains("AnkEnd")').index();
 
-    $('.form-group').slice(38, 48).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(38, 39).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseFive">Социальная ситуация</a></div>');
-    $('.form-group').slice(38, 48).wrapAll('<div id="collapseFive" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(38, 48).wrapAll('<div class="card-body"></div>');
+    $('.form-group').slice(AnkStart, AnkEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(AnkStart, AnkStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseOne">Анкетные данные</a></div>');
+    $('.form-group').slice(AnkStart, AnkEnd).wrapAll('<div id="collapseOne" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(AnkStart, AnkEnd).wrapAll('<div class="card-body"></div>');
 
-    $('.form-group').slice(48, 55).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(48, 49).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSix">Работа</a></div>');
-    $('.form-group').slice(48, 55).wrapAll('<div id="collapseSix" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(48, 55).wrapAll('<div class="card-body"></div>');
+    var PravStatStart = $('.form-group:contains("PravStatStart")').index();
+    var PravStatEnd = $('.form-group:contains("PravStatEnd")').index();
 
-    $('.form-group').slice(55, 65).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(55, 56).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSeven">Миграция</a></div>');
-    $('.form-group').slice(55, 65).wrapAll('<div id="collapseSeven" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(55, 65).wrapAll('<div class="card-body"></div>');
+    $('.form-group').slice(PravStatStart, PravStatEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(PravStatStart, PravStatStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseTwo">Правовой статус</a></div>');
+    $('.form-group').slice(PravStatStart, PravStatEnd).wrapAll('<div id="collapseTwo" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(PravStatStart, PravStatEnd).wrapAll('<div class="card-body"></div>');
 
-    $('.form-group').slice(65, 70).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(65, 66).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseNine">Особые примечания</a></div>');
-    $('.form-group').slice(65, 70).wrapAll('<div id="collapseNine" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(65, 70).wrapAll('<div class="card-body"></div>');
+    var EconomStatStart = $('.form-group:contains("EconomStatStart")').index();
+    var EconomStatEnd = $('.form-group:contains("EconomStatEnd")').index();
 
-    $('.form-group').slice(70, 75).wrapAll('<div class="card"></div>');
-    $('.form-group').slice(70, 71).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseTen">Контакты</a></div>');
-    $('.form-group').slice(70, 75).wrapAll('<div id="collapseTen" class="collapse" data-parent="#accordion"></div>');
-    $('.form-group').slice(70, 75).wrapAll('<div class="card-body"></div>');
+    $('.form-group').slice(EconomStatStart, EconomStatEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(EconomStatStart, EconomStatStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseThree">Экономический статус</a></div>');
+    $('.form-group').slice(EconomStatStart, EconomStatEnd).wrapAll('<div id="collapseThree" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(EconomStatStart, EconomStatEnd).wrapAll('<div class="card-body"></div>');
+
+    var MJStart = $('.form-group:contains("MJStart")').index();
+    var MJEnd = $('.form-group:contains("MJEnd")').index();
+
+    $('.form-group').slice(MJStart, MJEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(MJStart, MJStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseFour">Место жительства</a></div>');
+    $('.form-group').slice(MJStart, MJEnd).wrapAll('<div id="collapseFour" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(MJStart, MJEnd).wrapAll('<div class="card-body"></div>');
+
+    var PrichStart = $('.form-group:contains("PrichStart")').index();
+    var PrichEnd = $('.form-group:contains("PrichEnd")').index();
+
+    $('.form-group').slice(PrichStart, PrichEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(PrichStart, PrichStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseEight">Причина обращения в центр</a></div>');
+    $('.form-group').slice(PrichStart, PrichEnd).wrapAll('<div id="collapseEight" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(PrichStart, PrichEnd).wrapAll('<div class="card-body"></div>');
+
+    var SocSitStart = $('.form-group:contains("SocSitStart")').index();
+    var SocSitEnd = $('.form-group:contains("SocSitEnd")').index();
+
+    $('.form-group').slice(SocSitStart, SocSitEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(SocSitStart, SocSitStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseFive">Социальная ситуация</a></div>');
+    $('.form-group').slice(SocSitStart, SocSitEnd).wrapAll('<div id="collapseFive" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(SocSitStart, SocSitEnd).wrapAll('<div class="card-body"></div>');
+
+    var WorkStart = $('.form-group:contains("WorkStart")').index();
+    var WorkEnd = $('.form-group:contains("WorkEnd")').index();
+
+    $('.form-group').slice(WorkStart, WorkEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(WorkStart, WorkStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSix">Работа</a></div>');
+    $('.form-group').slice(WorkStart, WorkEnd).wrapAll('<div id="collapseSix" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(WorkStart, WorkEnd).wrapAll('<div class="card-body"></div>');
+
+    var MigStart = $('.form-group:contains("MigStart")').index();
+    var MigEnd = $('.form-group:contains("MigEnd")').index();
+
+    $('.form-group').slice(MigStart, MigEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(MigStart, MigStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseSeven">Миграция</a></div>');
+    $('.form-group').slice(MigStart, MigEnd).wrapAll('<div id="collapseSeven" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(MigStart, MigEnd).wrapAll('<div class="card-body"></div>');
+
+    var SpecialStart = $('.form-group:contains("SpecialStart")').index();
+    var SpecialEnd = $('.form-group:contains("SpecialEnd")').index();
+
+    $('.form-group').slice(SpecialStart, SpecialEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(SpecialStart, SpecialStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseNine">Особые примечания</a></div>');
+    $('.form-group').slice(SpecialStart, SpecialEnd).wrapAll('<div id="collapseNine" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(SpecialStart, SpecialEnd).wrapAll('<div class="card-body"></div>');
+
+    var ContactStart = $('.form-group:contains("ContactStart")').index();
+    var ContactEnd = $('.form-group:contains("ContactEnd")').index();
+
+    $('.form-group').slice(ContactStart, ContactEnd).wrapAll('<div class="card"></div>');
+    $('.form-group').slice(ContactStart, ContactStart + 1).before('<div class="card-header"><a class="card-link" data-toggle="collapse" href="#collapseTen">Контакты</a></div>');
+    $('.form-group').slice(ContactStart, ContactEnd).wrapAll('<div id="collapseTen" class="collapse" data-parent="#accordion"></div>');
+    $('.form-group').slice(ContactStart, ContactEnd).wrapAll('<div class="card-body"></div>');
     </script>
 
 
