@@ -1,4 +1,7 @@
 <?php
+
+$loader = require __DIR__.'/../app/autoload.php';
+
 $Name = $_POST['Name'];
 $Suname = $_POST['Suname'];
 $MiddleName = $_POST['MiddleName'];
