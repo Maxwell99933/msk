@@ -271,7 +271,10 @@
         
     function alertName() {
         var Name = $('input[name*="firstname"]').val();
-        alert(Name);
+        var Suname = $('input[name*="lastname"]').val();
+        var MiddleName = $('input[name*="middlename"]').val();
+        var Gender = $('#select2-chosen-1').text();
+        alert(Name + Suname + MiddleName + Gender);
     }
     </script>
 
