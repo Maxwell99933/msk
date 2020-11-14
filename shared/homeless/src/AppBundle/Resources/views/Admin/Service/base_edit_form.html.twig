@@ -9,6 +9,73 @@
             {{ "form_not_available"|trans({}, "SonataAdminBundle") }}
         </div>
     {% else %}
+        
+        
+        
+        
+        <form id="PechatForm" style="display: none;" action="anket.php" method="post">
+    <div class="form-group">
+        <input name="Name" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Suname" type="text">
+    </div>
+    <div class="form-group">
+        <input name="MiddleName" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Gender" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Birthday" type="text">
+    </div>
+    <div class="form-group">
+        <input name="BirthPlace" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Docs" type="text">
+    </div>
+    <div class="form-group">
+        <input name="DocsMore" type="text">
+    </div>
+    <div class="form-group">
+        <input name="DocsOther" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Citizenship" type="text">
+    </div>
+    <div class="form-group">
+        <input name="CitizenshipMore" type="text">
+    </div>
+    <div class="form-group">
+        <input name="CitizenshipOther" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Reg" type="text">
+    </div>
+    <div class="form-group">
+        <input name="SubRF" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Country" type="text">
+    </div>
+    <div class="form-group">
+        <input name="TypeMJ" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Occupation" type="text">
+    </div>
+    <div class="form-group">
+        <input name="OccupationOther" type="text">
+    </div>
+    <div class="form-group">
+        <input name="Contact" type="text">
+    </div>
+    <button type="submit">Сформировать документ</button>
+</form>
+
+
+
         <form id="ListenForm"
                 {% if app.request.get('type') == 'custom_modal' %}
                     {% set isModal = true %}
@@ -274,7 +341,43 @@
         var Suname = $('input[name*="lastname"]').val();
         var MiddleName = $('input[name*="middlename"]').val();
         var Gender = $('#select2-chosen-1').text();
-        alert(Name + Suname + MiddleName + Gender);
+        var Birthday = $('input[name*="birthDate"]').val();
+        var BirthPlace = $('input[name*="birthPlace"]').val();
+        var Docs = $('#select2-chosen-10').text();
+        
+        var Citizenship = $('#select2-chosen-9').text();
+        
+        var CitizenshipOther = $('textarea[name*="additionalFieldcitizenshipOther"]').val();
+        var Reg = $('#select2-chosen-13').text();
+        var SubRF = $('#select2-chosen-14').text();
+        var Country = $('#select2-chosen-15').text();
+        var TypeMJ = $('#select2-chosen-22').text();
+        var Occupation = $('#select2-chosen-17').text();
+        var OccupationOther = $('input[name*="additionalFieldRodZanOther"]').val();
+        var Contact = "Телефон: " + $('textarea[name*="additionalField10025"]').val() + "Email: " + $('textarea[name*="additionalField10026"]').val() + "Соцсети: " + $('textarea[name*="additionalField10027"]').val() + "Прочие контакты: " + $('textarea[name*="additionalFieldcontacts"]').val() + "Контакты родств. / друзей в случае необходимости: " + $('textarea[name*="additionalField10028"]').val();
+        
+        
+        $('#PechatForm [name="Name"]').val(Name);
+            $('#PechatForm [name="Suname"]').val(Suname);
+            $('#PechatForm [name="MiddleName"]').val(MiddleName);
+            $('#PechatForm [name="Gender"]').val(Gender);
+            $('#PechatForm [name="Birthday"]').val(Birthday);
+            $('#PechatForm [name="BirthPlace"]').val(BirthPlace);
+            $('#PechatForm [name="Docs"]').val(Docs);
+            $('#PechatForm [name="Citizenship"]').val(Citizenship);
+            $('#PechatForm [name="CitizenshipOther"]').val(CitizenshipOther);
+            $('#PechatForm [name="Reg"]').val(Reg);
+            $('#PechatForm [name="SubRF"]').val(SubRF);
+            $('#PechatForm [name="Country"]').val(Country);
+            $('#PechatForm [name="TypeMJ"]').val(TypeMJ);
+            $('#PechatForm [name="Occupation"]').val(Occupation);
+            $('#PechatForm [name="OccupationOther"]').val(OccupationOther);
+            $('#PechatForm [name="Contact"]').val(Contact);
+            $("#PechatForm").submit();
+            
+            
+            
+        alert("Печать");
     }
     </script>
 
