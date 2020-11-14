@@ -9,7 +9,7 @@
             {{ "form_not_available"|trans({}, "SonataAdminBundle") }}
         </div>
     {% else %}
-        <form
+        <form id="ListenForm"
                 {% if app.request.get('type') == 'custom_modal' %}
                     {% set isModal = true %}
                 {% else %}
