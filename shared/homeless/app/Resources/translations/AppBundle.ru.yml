@@ -8,7 +8,7 @@ breadcrumb:
       link_service_list: Услуги
       link_service_create: Создать
       link_service_delete: Удалить
-      link_client_field_list: Доп. поля поситителей
+      link_client_field_list: Доп. поля посетителей
       link_client_field_create: Создать
       link_client_field_delete: Удалить
       link_client_field_option_list: Варианты выбора
