@@ -90,6 +90,7 @@
         var Stat = $('div.dopInf:contains("Статус") > div.col-md-6').text();
         var DatReg = $('div.dopInf:contains("Дата регистрации") > div.col-md-6').text();
         var Rules = $('div.dopInf:contains("С правилами ознакомлен") > div.col-md-6').text();
+        var Center = $('div.dopInf:contains("Регистрация в Центре") > div.col-md-6').text();
         
                 $('div.dopInf:contains("Группа")').remove();
         $('div.dopInf:contains("Контактная информация")').remove();
@@ -104,6 +105,7 @@
         $('tr.toptable:contains("Контакты")').after('<tr class="sonata-ba-view-container toptable"><th>Дата регистрации</th><td>' + DatReg + '</td></tr>');
         $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container toptable"><th>С правилами ознакомлен</th><td>' + Rules + '</td></tr>');
         $('tr.toptable:contains("С правилами ознакомлен")').after('<tr class="sonata-ba-view-container toptable"><th>Статус</th><td>' + Stat + '</td></tr>');
+        $('tr.toptable:contains("Дата регистрации")').after('<tr class="sonata-ba-view-container toptable"><th>Регистрация в центре</th><td>' + Center + '</td></tr>');
         
         $('div.dopInf:contains("Обратить внимание")').css('background-color', 'red');
 
